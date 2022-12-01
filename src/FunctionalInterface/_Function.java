@@ -30,7 +30,7 @@ public class _Function {
         return number+1;
     }
 
-    //represents a function that accepts one argument and produces a result
+    //Function represents a function that accepts one argument and produces a result
     static Function<Integer,Integer> incrementByOneFunction = number -> number+1;
 
     static Function<Integer,Integer> multiplyBy10Function = number -> number*10;
@@ -40,8 +40,7 @@ public class _Function {
         return (numberToIncrementByOne+1)*numberToMultiplyBy;
     }
 
-    //now using BiFunction
-    //Represents a function that accepts two arguments and produces a result
+    //BiFunction represents a function that accepts two arguments and produces a result
     static BiFunction<Integer,Integer,Integer> incrementByOneAndMultiplyBiFunction =
             (numberToIncrementByOne,numberToMultiplyBy) -> (numberToIncrementByOne+1)*numberToMultiplyBy;
 
