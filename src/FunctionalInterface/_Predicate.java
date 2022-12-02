@@ -1,5 +1,6 @@
 package FunctionalInterface;
 
+import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 public class _Predicate {
@@ -15,6 +16,8 @@ public class _Predicate {
         System.out.println("Is phone number valid and contains 3 = "+isPhoneNumberVaildPredicate.and(containsNumber3).test("911234567890"));
         System.out.println("Is phone number valid and contains 3 = "+isPhoneNumberVaildPredicate.or(containsNumber3).test("911204567890"));
 
+        //BiPredicate Functional interface
+        System.out.println(isPhoneNumberVaildBiPredicate.test("911234567890","IN"));
     }
 
     //regular function
@@ -26,6 +29,9 @@ public class _Predicate {
     static Predicate<String> isPhoneNumberVaildPredicate = phoneNumber -> phoneNumber.startsWith("91") && phoneNumber.length()==12;
 
     static Predicate<String> containsNumber3 = phoneNumber -> phoneNumber.contains("3");
+
+    //BiPredicate represents a predicate (boolean-valued function) of two arguments.
+    static BiPredicate<String,String> isPhoneNumberVaildBiPredicate = (phoneNumber,country) -> {return (phoneNumber.startsWith("91") && country.contains("IN"));};
 
 }
 
