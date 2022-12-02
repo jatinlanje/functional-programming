@@ -17,4 +17,3 @@ public class _Supplier {
     static Supplier<String> getDBConnectionUrlSupplier = () -> "jdbc:localhost:123/user";
 }
 
-//Supplier represents a supplier of results basically accepts nothing and returns a value
